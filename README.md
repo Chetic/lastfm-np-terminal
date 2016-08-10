@@ -6,9 +6,25 @@ Dependencies
 ------------
 - nodejs
 
-How to run
+How to run terminal app
 ----------
 > npm install
 
-> nodejs app.js
+> node app.js \<username\>
 
+irssi plugin
+------------
+> cd ~/.irssi/scripts
+
+> git clone git@github.com:Chetic/lastfm-np-terminal
+
+> cd lastfm-np-terminal
+
+> npm install
+
+From within irssi:
+> /load lastfm-np-terminal/lastfm-np-irssi.pl
+
+> /set lastfm_user \<username\>
+
+> /np
