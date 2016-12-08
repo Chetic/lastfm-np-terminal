@@ -18,6 +18,11 @@ Irssi::command_bind('np', sub {
 	my $user = Irssi::settings_get_str("lastfm_user");
 	my $scriptdir = dirname(__FILE__);
 	my $text = `node $scriptdir/app.js $user`;
-	Irssi::active_win()->command("me :: $text");
+	if ($text eq "") {
+		Irssi::active_win()->print("Not currently playing anything");	
+	}
+	else {
+		Irssi::active_win()->command("me :: $text");
+	}
 }, 'lastfm');
 
